@@ -18,7 +18,7 @@ function css(x, y) {
 // this is not completed
 
 let mainObj = localStorage.getItem('studts')
-if(!mainObj) { mainObj = {} }
+if(!mainObj) { mainObj = [] }
 else {
     mainObj = JSON.parse(mainObj)
 }
@@ -74,5 +74,6 @@ formel[3].onclick = () => {
     let valname = formel[1].value;
     let classnammee = formel[2].value
     let newarr = [valname, classnammee]
-    
+    mainObj.push(newarr)
+    console.log(mainObj)
 }
